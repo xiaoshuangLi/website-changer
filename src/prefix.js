@@ -10,6 +10,9 @@ chrome.storage.sync.get([key], (result = {}) => {
 function getDom() {
   if (!styleDom) {
     styleDom = document.createElement('style');
+  }
+
+  if (!styleDom.parentNode) {
     document.head.appendChild(styleDom);
   }
 
