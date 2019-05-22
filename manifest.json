@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+
+  "name": "style",
+  "description": "some websites style just suck...",
+  "version": "1.0",
+
+  "permissions": [
+    "activeTab", "tabs", "storage"
+  ],
+
+  "browser_action": {
+    "default_title": "Style Changer",
+    "default_popup": "src/popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "matches": ["http://*/*", "https://*/*"],
+      "js": ["./src/prefix.js"]
+    }
+  ]
+}

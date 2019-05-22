@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Style Changer</title>
+    <meta charset="utf-8">
+
+    <style>
+      .container {
+        padding: 5px;
+      }
+
+      .container > * + * {
+        margin-top: 10px;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 5px 10px;
+        border: 1px solid currentColor;
+        cursor: pointer;
+        transition: .2s;
+      }
+
+      .btn:hover {
+        background: black;
+        color: white;
+      }
+
+      .btn:active {
+        opacity: .7;
+      }
+
+      .input {
+        display: block;
+        width: 300px;
+        padding: 5px;
+        color: #333;
+        outline: none;
+        resize: none;
+        border: 1px solid #eee;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div id="btn" class="btn">
+           启用
+        </div>
+      </div>
+      <div class="body">
+        <textarea id="textarea" class="input" rows="10"></textarea>
+      </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
